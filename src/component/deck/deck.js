@@ -12,3 +12,5 @@ const Deck = props => (
     {props.content.records && props.content.map((card, index) => <Card key={index} content={card} />)}
   </section>
 );
+
+export default Deck;
