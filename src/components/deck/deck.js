@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './deck.scss';
+// import './deck.scss';
 
 import Card from '../card/card.js';
 
