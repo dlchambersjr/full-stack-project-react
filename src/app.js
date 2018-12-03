@@ -29,7 +29,7 @@ class app extends React.Component {
       <React.Fragment>
         <Header>
           <header>
-            <h1>Content from the server...</h1>
+            <h1>My China Trip - December 2016</h1>
           </header>
         </Header>
         <Page content={this.state.content} />

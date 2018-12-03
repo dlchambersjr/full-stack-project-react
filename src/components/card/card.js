@@ -17,7 +17,7 @@ const Card = props => {
       </figure>
       <div className="links">
         {props.content.links.map((link, index) => (
-          <a key={index} className={link.type} href={link.href}>
+          <a key={index} className={link.type} href={link.href} target="_blank" rel="noopener noreferrer">
             {link.title}
           </a>
         ))}
