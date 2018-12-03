@@ -1,44 +1,68 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Full-Stack-Project(react)
 
-## Available Scripts
+### Author: David Chambers
 
-In the project directory, you can run:
+### Links and Resources
+* [REPO: React App](https://github.com/dlchambersjr/full-stack-project-react)
+* [REPO: README.MD](https://github.com/dlchambersjr/full-stack-project-react/blob/master/README.md)
+* [DEPLOYED: React App](http://dc-week7-fullstack-project.s3-website-us-west-2.amazonaws.com/)
+(NOTE:  I attempted to upload with aws.yml twice with no success.)  
 
-### `npm start`
+### Modules
+#### `index.js`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+###### `class Main -> renders <App/>`
+entry point to the app.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+#### `app.js` -> central hub for the app
+##### Exported Values and Methods
+Exports the results of the render() in the app class
 
-### `npm test`
+###### `componentDidMount() -> JSON data`
+Goes to a serve and retrieves content to passed into the Page component.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+###### `render(array) -> jsx output`
+creates out put that contains Header, Page, and Footer Components.
 
-### `npm run build`
+#### `.js` -> central hub for the app
+##### Exported Values and Methods
+Exports the results of the render() in the app class
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+###### `componentDidMount() -> JSON data`
+Goes to a serve and retrieves content to passed into the Page component.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+###### `render(array) -> jsx output`
+creates out put that contains Header, Page, and Footer Components.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Components
+#### `header.js` -> exports props.children
 
-### `npm run eject`
+#### `page.js` -> content from <Deck>
+##### Exported Values and Methods
+The exported value from Deck is provided via props from Page and the content data passed down from App
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### `deck.js` -> content from <Child>
+The exported value from Card is provided via props from Deck and the content data passed down from Page
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### `card.js` -> content received from <Deck>
+Renders the props that have been based in from Deck
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### `footer.js` -> exports props.children
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Stylesheets
+Uses SASS to create css styles for the components.
+* `design.scss` -> imports a reset css file, variables, and the core SASS.
+* `reset.scss` -> uses Eric Meyers [reset css](https://meyerweb.com/eric/tools/css/reset/)
+* `variables.scss` -> creates variables to be used in css decedants.
+* `core.scss` -> defines basic css across the layout
+* `header.scss` -> establishes styling for <Header>
+* `deck.scss` -> establishes styling for <Deck>
+* `card.scss` -> establishes styling for <Card>
+* `footer.scss` -> establishes styling for <Footer>
 
-## Learn More
+### Running the app
+* `npm start`
+* or visit the [DEPLOYED version](http://dc-week7-fullstack-project.s3-website-us-west-2.amazonaws.com/)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### UML
+* [REACT UML](https://raw.githubusercontent.com/dlchambersjr/full-stack-project-server/master/uml-react.jpg)
