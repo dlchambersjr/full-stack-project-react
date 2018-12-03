@@ -1,0 +1,60 @@
+.card {
+  background-color: rgba(0, 0, 0, 0.60);
+  border: 2px solid black;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.75);
+  padding:25px;
+  text-align: center;
+  color: white;
+
+  h1, p, figcaption {
+    letter-spacing: 2px;
+    line-height: 110%;
+  }
+  
+  h1 {
+    color: yellow;
+    font-family: 'Acme', sans-serif;
+    font-size: 3vw;
+    font-weight: bold;
+    margin: 10px 0px 10px 10px;
+  } 
+
+  p, a, figcaption {
+    font-family: 'Baloo Tamma', cursive;  }
+
+  p {
+    font-size: 2.5vw;
+    margin: 10px auto;
+  }
+
+  figcaption {
+    color: lightpink;
+    font-size: 1vw;
+    margin: 10px auto 20px auto;
+   
+  } 
+
+  img{
+    width: 100%;
+  }
+
+  a {
+    border: 1px solid black;
+    box-shadow: 2px 2px 1px grey;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2vw;
+    padding: 5px 20px;
+    text-decoration: none;
+   
+    &.primary {
+      background-color: green;
+      margin-right: 10px;
+    }
+
+    &.secodary {
+      background-color: rgba(255, 0, 0, 0.555);
+      margin-left: 10px;
+    }
+  }
+}
