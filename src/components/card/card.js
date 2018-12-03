@@ -1,11 +1,11 @@
 import React from 'react';
 
-// import './card.scss';
+import './card.scss';
 
 const Card = props => {
   return (
     <div className='card'>
-      <header>{props.content.title}</header>
+      <h1>{props.content.title}</h1>
       <p>{props.content.copy}</p>
       <figure>
         <img

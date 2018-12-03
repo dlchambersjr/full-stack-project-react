@@ -28,13 +28,13 @@ class app extends React.Component {
     return (
       <React.Fragment>
         <Header>
-          <div>
+          <header>
             <h1>Content from the server...</h1>
-          </div>
+          </header>
         </Header>
         <Page content={this.state.content} />
         <Footer>
-          <div>
+          <div className='footer'>
             <h5>&copy; 2018 - David Chambers</h5>
           </div>
         </Footer>

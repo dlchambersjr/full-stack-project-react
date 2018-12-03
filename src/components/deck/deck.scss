@@ -1,11 +1,16 @@
 .deck {
-
-  header {
-  
-  }
-  
-  h2 {
-  
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
 
 } //end .deck
+
+h2 {
+  color: #000000;
+  text-align: center;
+  text-decoration: underline;
+  font-family: 'Acme';
+  font-size: 3vw;
+  padding: 25px;
+}
