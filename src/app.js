@@ -1,9 +1,44 @@
 import React from 'react';
+import superagent from 'superagent';
+
+import './stylesheets/design.scss';
+
+import Header from './components/header/header.js';
+import Page from './components/page/page.js';
+import Footer from './components/footer/footer.js';
 
 class app extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      serverURL: 'https://full-stack-back-end.herokuapp.com/content',
+      content: [],
+    };
+  }
+
+  componentDidMount() {
+    superagent('get', this.state.serverURL)
+      .then(results => {
+        let content = (results.body);
+        this.setState({ content });
+      }).catch(error => console.error(error));
+  }
+
   render() {
     return (
-      <h1>Hello World</h1>
+      <React.Fragment>
+        <Header>
+          <div>
+            <h1>Content from the server...</h1>
+          </div>
+        </Header>
+        <Page content={this.state.content} />
+        <Footer>
+          <div>
+            <h5>&copy; 2018 - David Chambers</h5>
+          </div>
+        </Footer>
+      </React.Fragment>
     );
   }
 }
