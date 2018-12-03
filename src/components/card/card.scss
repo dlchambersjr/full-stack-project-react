@@ -5,6 +5,8 @@
   padding:25px;
   text-align: center;
   color: white;
+  width:25%;
+  
 
   h1, p, figcaption {
     letter-spacing: 2px;
@@ -39,6 +41,7 @@
   }
 
   a {
+    display:block;
     border: 1px solid black;
     box-shadow: 2px 2px 1px grey;
     color: white;
@@ -46,15 +49,14 @@
     font-size: 2vw;
     padding: 5px 20px;
     text-decoration: none;
+    margin: 10px auto;
    
     &.primary {
       background-color: green;
-      margin-right: 10px;
-    }
+          }
 
     &.secodary {
       background-color: rgba(255, 0, 0, 0.555);
-      margin-left: 10px;
     }
   }
 }

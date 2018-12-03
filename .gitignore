@@ -3,6 +3,7 @@ db
 .env
 temp
 build
+aws.yml
 
 # Created by https://www.gitignore.io/api/vim,osx,node,linux,windows
 ### Linux ###
@@ -141,5 +142,8 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# AMAZON AWS YML
+aws.yml
 
 # End of https://www.gitignore.io/api/vim,osx,node,linux,windows
