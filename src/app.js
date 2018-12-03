@@ -16,20 +16,26 @@ class app extends React.Component {
     };
   }
 
-
+  componentDidMount() {
+    superagent('get', this.state.serverURL)
+      .then(results => {
+        let content = (results.body);
+        this.setState({ content });
+      }).catch(error => console.error(error));
+  }
 
   render() {
     return (
       <React.Fragment>
         <Header>
           <div>
-            <h1>Hello World - Header</h1>
+            <h1>Content from the server...</h1>
           </div>
         </Header>
         <Page content={this.state.content} />
         <Footer>
           <div>
-            <h5>Hello World - footer</h5>
+            <h5>&copy; 2018 - David Chambers</h5>
           </div>
         </Footer>
       </React.Fragment>
